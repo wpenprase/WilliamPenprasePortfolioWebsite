@@ -1,0 +1,368 @@
+/* 
+----------- Color Codes -------------------------
+Name           Hex Code
+-------------------------------------------------
+Aquamarine      A9FFCB
+Indigo dye      08415C
+Moon stone      6C969D rgb(108, 150, 157)
+Bright Pink     FF6978
+Coral           F78154
+Seashell        FFF5EE
+-------------------------------------------------*/
+
+
+/* ---------------- Global Styles --------------------- */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px | setting default to 10px*/
+    background-color: rgb(108, 150, 157);
+}
+
+html, body {
+    height : 100%;
+    margin: 0;
+}
+
+body {
+    background: rgb(108, 150, 157);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem; /* 15px */
+    line-height: 1.4;
+}
+
+h1,h2,h3 {
+    font-family: "Caveat", cursive;
+    font-weight: 500;
+    margin: 0;
+}
+
+h1 {
+    font-size: 7rem; /* 70px */
+    line-height: 0.85;
+}
+
+h2 {
+    font-size: 3.6rem; /* 40px */
+}
+
+h3 {
+    font-size: 2.4rem; /* 24px */
+}
+
+/* --------------------------------------- Links ----------------------------------------- */
+a {
+    color: coral;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: mediumturquoise;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background : coral;
+    color: seashell;
+    text-decoration: none;
+}
+
+.btn {
+    background :tomato;
+    color: seashell;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    margin: 2px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    border-radius: 8px;
+    justify-content: center;
+
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* main a {
+    color: rgb(0, 26, 255)
+} */
+
+/* ------------------- Home --------------------------*/
+
+.home {
+    background: url(../images/technology_laptop.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .content-wrapper {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    margin: 40px auto;
+}
+
+.content-bg {
+    background-color: rgba(255, 255, 255 , 0.65);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:640px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+
+    }
+}
+
+
+/* ----------------- Resume ----------------------- */
+.resume header::before {
+    background: url(../images/technology_laptop.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 400px;
+}
+.resume .content-wrapper {
+    background-color: rgba(255, 255, 255 , 0.75);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+
+.resume-section {
+    margin-bottom: 50px;
+}
+
+.resume-section h2 {
+    border-bottom: 2px solid gray;
+}
+
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .resume header::before {
+        height: 250px;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+
+}
+
+/* ----------------- Profile ----------------------- */
+
+
+
+/* ----------------- Projects ----------------------- */
+
+.project-item {
+    display: flow-root;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px; 
+    margin: 30px 0;
+}
+
+.project-item img {
+    width: 300px;
+}
+
+@media screen and (min-width: 700px) and (min-width: 861px) {
+    .project-item {
+        display: grid;
+    }
+
+    .project-item img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .project-item {
+        display: block;
+    }
+
+    .project-item img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
+/* ----------------- Work Experience ----------------------- */
+.work-item {
+
+    margin: 30px 0;
+}
+
+.work-details p {
+    margin: 0 px;
+}
+
+@media screen and (min-width: 860px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+
+    .work-description p:first-child {
+    margin-top: 0px;
+}
+}
+
+
+/* ----------------- Education ----------------------- */
+
+.education-item {
+    margin: 20px 0px;
+}
+
+.education-item p {
+    margin: 0px;
+}
+
+
+
+/* ----------------- Footer ----------------------- */
+footer {
+    background-color: rgb(8, 65, 92, 0.9);
+    border-radius: 0px;
+    color: seashell;
+    text-align: center;
+    
+    
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.socials img {
+    width: 32px;
+}
+
+.socials img:hover {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 640px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    footer  {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+
+
+/*------------------ CSS Reference Guide ------------------
+
+-----------ID Selectors example-----------
+id="highlight"
+
+#highlight {
+    background-color: aquamarine;
+}
+
+-----------Class Selectors example-----------
+class="highlight"
+
+.highlight {
+    background-color: aquamarine;
+}
+
+combining ID and Class Selectors:
+id="highlight" class="special"
+
+#highlight.special {
+    border: 2px solid indigo;
+}
+
+
+--------------- Psuedo-Class Selectors ---------------------
+a:hover {
+    color: coral;
+}
+
+article p:first-letter {
+    font-size: 200%;
+    color: indigo;
+}
+
+------------------- psuedo-element example ------------------
+p::first-line {
+    font-variant: small-caps;
+}
+
+-------------------- selector Weights ------------------------
+Universal Selector:        * { }                     (0 points)
+Element Selector:          p { }                     (1 point)
+Class Selector:           .class { }                (10 points)
+ID Selector:              #id { }                   (100 points)
+Inline Style:             style=" "                 (1000 points)
+
+!important:              overrides all other weights and takes precedence (Last resort)
+
+
+---------------------------------------------------------------
+
+*/
